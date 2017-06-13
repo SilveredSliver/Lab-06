@@ -30,7 +30,9 @@ var pikePlaceMarket = {
   locationName: 'Pike Place Market',
   minCustomersPerHour: 23,
   maxCustomersPerHour: 65,
-  averageCookiesSoldPerHour: 6.3,
+  averageCookiesSoldPerHour: function() {
+    return (Math.floor(Math.random() * (65 - 23 + 1)) + 23 / Math.floor(Math.random() * (347 - 18 + 1)) + 18)
+  },
   calculateCustomersThisHour: function() {
     return Math.floor(Math.random() * (65 - 23 + 1)) + 23},
   customersThisHour: [],
@@ -43,6 +45,10 @@ var pikePlaceMarket = {
 pikePlaceMarket.calculateCookiesThisHour();
 pikePlaceMarket.calculateCustomersThisHour();
 //dont forget to call the functions
+
+var cookiesPerHour = document.getElementById('averageCookiesSoldPerHour');
+averageCookiesSoldPerHour.innerHTML = '<header2>Pike Place Average Cookies Per Hour</header2><p>' + pikePlaceMarket.averageCookiesSoldPerHour() + '</p>';
+
 var storeLocation = document.getElementById('locationName');
 locationName.innerHTML = '<h1>Store Name</h1><p>' + pikePlaceMarket.locationName + '</p>';
 
@@ -64,11 +70,11 @@ var storeHours = ['6-AM', '7-PM'];
 
 var seaTacAirport = {
   locationName: 'SeaTac Airport',
-  minCustomersPerHour: 24,
-  maxCustomersPerHour: 83,
-  averageCookiesSoldPerHour: 6.3,
+  minCustomersPerHour: 3,
+  maxCustomersPerHour: 24,
+  averageCookiesSoldPerHour: 1.2,
   calculateCustomersThisHour: function() {
-    return Math.floor(Math.random() * (83 - 24 + 1)) + 24},
+    return Math.floor(Math.random() * (24 - 3 + 1)) + 3},
   customersThisHour: [],
   calculateCookiesThisHour: function() {
     return Math.floor(Math.random() * (96 - 16 + 1)) + 16},
@@ -76,8 +82,6 @@ var seaTacAirport = {
   render: function() {
     },
 };
-seaTacAirport.calculateCookiesThisHour();
-seaTacAirport.calculateCustomersThisHour();
 //dont forget to call the functions
 var storeLocation2 = document.getElementById('locationName2');
 locationName2.innerHTML = '<h6></h6><p>' + seaTacAirport.locationName + '</p>';
@@ -99,11 +103,11 @@ var storeHours = ['6-AM', '7-PM'];
 
 var seattleCenter = {
   locationName: 'Seattle Center',
-  minCustomersPerHour: 24,
-  maxCustomersPerHour: 83,
-  averageCookiesSoldPerHour: 6.3,
+  minCustomersPerHour: 11,
+  maxCustomersPerHour: 38,
+  averageCookiesSoldPerHour: 3.7,
   calculateCustomersThisHour: function() {
-    return Math.floor(Math.random() * (83 - 24 + 1)) + 24},
+    return Math.floor(Math.random() * (38 - 11 + 1)) + 11},
   customersThisHour: [],
   calculateCookiesThisHour: function() {
     return Math.floor(Math.random() * (96 - 16 + 1)) + 16},
@@ -111,8 +115,6 @@ var seattleCenter = {
   render: function() {
     },
 };
-seaTacAirport.calculateCookiesThisHour();
-seaTacAirport.calculateCustomersThisHour();
 //dont forget to call the functions
 var storeLocation3 = document.getElementById('locationName3');
 locationName3.innerHTML = '<h11></h11><p>' + seattleCenter.locationName + '</p>';
@@ -136,11 +138,11 @@ var storeHours = ['6-AM', '7-PM'];
 
 var capitolHill = {
   locationName: 'Capitol Hill',
-  minCustomersPerHour: 24,
-  maxCustomersPerHour: 83,
-  averageCookiesSoldPerHour: 6.3,
+  minCustomersPerHour: 20,
+  maxCustomersPerHour: 38,
+  averageCookiesSoldPerHour: 2.3,
   calculateCustomersThisHour: function() {
-    return Math.floor(Math.random() * (83 - 24 + 1)) + 24},
+    return Math.floor(Math.random() * (38 - 20 + 1)) + 20},
   customersThisHour: [],
   calculateCookiesThisHour: function() {
     return Math.floor(Math.random() * (96 - 16 + 1)) + 16},
@@ -148,8 +150,6 @@ var capitolHill = {
   render: function() {
     },
 };
-seaTacAirport.calculateCookiesThisHour();
-seaTacAirport.calculateCustomersThisHour();
 //dont forget to call the functions
 var storeLocation4 = document.getElementById('locationName4');
 locationName4.innerHTML = '<h16></h16><p>' + seattleCenter.locationName + '</p>';
@@ -172,11 +172,11 @@ var storeHours = ['6-AM', '7-PM'];
 
 var alki = {
   locationName: 'Alki',
-  minCustomersPerHour: 24,
-  maxCustomersPerHour: 83,
-  averageCookiesSoldPerHour: 6.3,
+  minCustomersPerHour: 2,
+  maxCustomersPerHour: 16,
+  averageCookiesSoldPerHour: 4.6,
   calculateCustomersThisHour: function() {
-    return Math.floor(Math.random() * (83 - 24 + 1)) + 24},
+    return Math.floor(Math.random() * (16 - 2 + 1)) + 2},
   customersThisHour: [],
   calculateCookiesThisHour: function() {
     return Math.floor(Math.random() * (96 - 16 + 1)) + 16},
@@ -184,8 +184,6 @@ var alki = {
   render: function() {
     },
 };
-alki.calculateCookiesThisHour();
-alki.calculateCustomersThisHour();
 //dont forget to call the functions
 var storeLocation5 = document.getElementById('locationName5');
 locationName5.innerHTML = '<h21></h21><p>' + alki.locationName + '</p>';
